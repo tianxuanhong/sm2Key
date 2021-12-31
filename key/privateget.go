@@ -28,6 +28,7 @@ func GetPrivateKeySoft()*PrivateKey {
 	priv, err := KeyImport(block.Bytes)
 	return priv
 }
+
 func KeyImport(raw interface{}) (k *PrivateKey, err error) {
 	der, ok := raw.([]byte)
 	if !ok {
