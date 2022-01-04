@@ -24,7 +24,6 @@ func GetPrivateKeySoft()*PrivateKey {
 	}
 
 	block, _ := pem.Decode(rawKey)
-
 	priv, err := KeyImport(block.Bytes)
 	return priv
 }
